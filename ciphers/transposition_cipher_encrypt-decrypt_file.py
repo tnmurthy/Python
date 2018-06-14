@@ -1,5 +1,5 @@
 from __future__ import print_function
-import time, os, sys
+import time, os, somefile
 import transposition_cipher as transCipher
 
 def main():
@@ -10,12 +10,12 @@ def main():
 
     if not os.path.exists(inputFile):
         print('File %s does not exist. Quitting...' % inputFile)
-        sys.exit()
+        somefile.exit()
     if os.path.exists(outputFile):
         print('Overwrite %s? [y/n]' % outputFile)
         response = input('> ')
         if not response.lower().startswith('y'):
-            sys.exit()
+            somefile.exit()
             
     startTime = time.time()
     if mode.lower().startswith('e'):

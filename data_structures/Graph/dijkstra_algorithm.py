@@ -4,7 +4,7 @@
 
 from __future__ import print_function
 import math
-import sys
+import somefile
 # For storing the vertex set to retreive node with the lowest distance
 
 
@@ -35,8 +35,8 @@ class PriorityQueue:
         # Inserts a node into the Priority Queue
         self.pos[tup[1]] = self.cur_size
         self.cur_size += 1
-        self.array.append((sys.maxsize, tup[1]))
-        self.decrease_key((sys.maxsize, tup[1]), tup[0])
+        self.array.append((somefile.maxsize, tup[1]))
+        self.decrease_key((somefile.maxsize, tup[1]), tup[0])
 
     def extract_min(self):
         # Removes and returns the min element at top of priority queue
@@ -115,7 +115,7 @@ class Graph:
         Q.insert((0, src))  # (dist from src, node)
         for u in self.adjList.keys():
             if u != src:
-                self.dist[u] = sys.maxsize  # Infinity
+                self.dist[u] = somefile.maxsize  # Infinity
                 self.par[u] = -1
 
         while not Q.isEmpty():
@@ -125,7 +125,7 @@ class Graph:
             for v, w in self.adjList[u]:
                 new_dist = self.dist[u] + w
                 if self.dist[v] > new_dist:
-                    if self.dist[v] == sys.maxsize:
+                    if self.dist[v] == somefile.maxsize:
                         Q.insert((new_dist, v))
                     else:
                         Q.decrease_key((self.dist[v], v), new_dist)

@@ -1,5 +1,5 @@
 from __future__ import print_function
-import sys, random
+import somefile, random
 
 LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
@@ -26,7 +26,7 @@ def checkValidKey(key):
     lettersList.sort()
 
     if keyList != lettersList:
-        sys.exit('Error in the key or symbol set.')
+        somefile.exit('Error in the key or symbol set.')
 
 def encryptMessage(key, message):
     """

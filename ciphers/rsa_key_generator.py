@@ -1,5 +1,5 @@
 from __future__ import print_function
-import random, sys, os
+import random, somefile, os
 import rabin_miller as rabinMiller, cryptomath_module as cryptoMath
 
 def main():
@@ -31,7 +31,7 @@ def makeKeyFiles(name, keySize):
     if os.path.exists('%s_pubkey.txt' % (name)) or os.path.exists('%s_privkey.txt' % (name)):
         print('\nWARNING:')
         print('"%s_pubkey.txt" or "%s_privkey.txt" already exists. \nUse a different name or delete these files and re-run this program.' % (name, name))
-        sys.exit()
+        somefile.exit()
 
     publicKey, privateKey = generateKey(keySize)
     print('\nWriting public key to file %s_pubkey.txt...' % name)

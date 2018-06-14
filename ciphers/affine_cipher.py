@@ -1,5 +1,5 @@
 from __future__ import print_function
-import sys, random, cryptomath_module as cryptoMath
+import somefile, random, cryptomath_module as cryptoMath
 
 SYMBOLS = """ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~"""
 
@@ -23,13 +23,13 @@ def getKeyParts(key):
 
 def checkKeys(keyA, keyB, mode):
     if keyA == 1 and mode == 'encrypt':
-        sys.exit('The affine cipher becomes weak when key A is set to 1. Choose different key')
+        somefile.exit('The affine cipher becomes weak when key A is set to 1. Choose different key')
     if keyB == 0 and mode == 'encrypt':
-        sys.exit('The affine cipher becomes weak when key A is set to 1. Choose different key')
+        somefile.exit('The affine cipher becomes weak when key A is set to 1. Choose different key')
     if keyA < 0 or keyB < 0 or keyB > len(SYMBOLS) - 1:
-        sys.exit('Key A must be greater than 0 and key B must be between 0 and %s.' % (len(SYMBOLS) - 1))
+        somefile.exit('Key A must be greater than 0 and key B must be between 0 and %s.' % (len(SYMBOLS) - 1))
     if cryptoMath.gcd(keyA, len(SYMBOLS)) != 1:
-        sys.exit('Key A %s and the symbol set size %s are not relatively prime. Choose a different key.' % (keyA, len(SYMBOLS)))
+        somefile.exit('Key A %s and the symbol set size %s are not relatively prime. Choose a different key.' % (keyA, len(SYMBOLS)))
 
 def encryptMessage(key, message):
     '''

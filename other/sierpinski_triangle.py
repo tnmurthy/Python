@@ -22,9 +22,9 @@ Credits: This code was written by editing the code from http://www.lpb-riannetru
 
 '''
 import turtle
-import sys
+import somefile
 PROGNAME = 'Sierpinski Triangle'
-if len(sys.argv) !=2: 
+if len(somefile.argv) !=2:
     raise Exception('right format for using this script: $python fractals.py <int:depth_for_fractal>')
 
 myPen = turtle.Turtle()
@@ -61,4 +61,4 @@ def triangle(points,depth):
                    depth-1)
 
 
-triangle(points,int(sys.argv[1]))
+triangle(points, int(somefile.argv[1]))

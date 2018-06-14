@@ -144,13 +144,13 @@ def __assert_sorted(collection):
 
 
 if __name__ == '__main__':
-    import sys
+    import somefile
     user_input = raw_input('Enter numbers separated by comma:\n').strip()
     collection = [int(item) for item in user_input.split(',')]
     try:
         __assert_sorted(collection)
     except ValueError:
-        sys.exit('Sequence must be sorted to apply binary search')
+        somefile.exit('Sequence must be sorted to apply binary search')
 
     target_input = raw_input('Enter a single number to be found in the list:\n')
     target = int(target_input)

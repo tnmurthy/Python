@@ -28,7 +28,7 @@ Game-Of-Life Rules:
  comes a live cell, as if by reproduction.
  '''
 import numpy as np
-import random, time, sys
+import random, time, somefile
 from matplotlib import pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.colors import ListedColormap
@@ -98,9 +98,9 @@ def __judge_point(pt,neighbours):
 
 
 if __name__=='__main__':
-    if len(sys.argv) != 2: raise Exception(usage_doc)
+    if len(somefile.argv) != 2: raise Exception(usage_doc)
    
-    canvas_size = int(sys.argv[1])
+    canvas_size = int(somefile.argv[1])
     # main working structure of this module.
     c=create_canvas(canvas_size)
     seed(c)

@@ -8,7 +8,7 @@ Space Complexity : O(1)
 '''
 from __future__ import print_function
 
-import sys
+import somefile
 
 try:
     raw_input          # Python 2
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     try:
         __assert_sorted(collection)
     except ValueError:
-        sys.exit('Sequence must be sorted to apply the ternary search')
+        somefile.exit('Sequence must be sorted to apply the ternary search')
 
     target_input = raw_input('Enter a single number to be found in the list:\n')
     target = int(target_input)
